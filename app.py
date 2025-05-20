@@ -22,14 +22,14 @@ api_wrapper_arxiv = ArxivAPIWrapper(top_k_results=1, doc_content_chars_max=300)
 arxiv = ArxivQueryRun(api_wrapper=api_wrapper_arxiv)
 
 search = DuckDuckGoSearchRun(name = "Search")
-st.title("Jarvis - Chat & Search")
+st.title("Langchain - Chat & Search")
 """
 In this example, we'd be using StreamlitCallbackHandler to display the throughts and actions of the agent in an interactive Streamlit App.
 """
 
 if "data" not in st.session_state:
     st.session_state["data"] = [
-        {"role":"assistant", "content": "Hi, I'm Jarvis who can search the web. How can I help you"}
+        {"role":"assistant", "content": "Hi, I'm a Search Engine Chatbot who can search the web. How can I help you"}
     ]
 
 for msg in st.session_state.data:
